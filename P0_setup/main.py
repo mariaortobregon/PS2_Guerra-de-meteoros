@@ -8,8 +8,8 @@ import sys
 pygame.init()
 
 # TODO 1: Define el ancho y alto de la ventana (sugerencia: 800 x 400)
-ANCHO = None  # <-- reemplaza None por un número
-ALTO = None   # <-- reemplaza None por un número
+ANCHO = 250  # <-- reemplaza None por un número
+ALTO = 250   # <-- reemplaza None por un número
 
 pantalla = pygame.display.set_mode((ANCHO, ALTO))
 pygame.display.set_caption("Esquiva los Meteoritos")
@@ -18,11 +18,11 @@ reloj = pygame.time.Clock()
 
 # TODO 2: Define los cuadros por segundo (FPS) a los que correrá el juego.
 # Sugerencia: 60
-FPS = None
+FPS = 50
 
 # TODO 3: Define un color de fondo en formato RGB: una tupla de 3 números (0-255)
 # Ejemplo de morado oscuro: (30, 20, 50)
-COLOR_FONDO = None
+COLOR_FONDO = (60, 30, 90)
 
 corriendo = True
 while corriendo:
