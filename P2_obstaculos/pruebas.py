@@ -43,8 +43,8 @@ VELOCIDAD_METEORITO = 4
 sprite_grigio = pygame.image.load("media/grigio.jpeg").convert_alpha()
 sprite_bruno = pygame.image.load("media/bruno.jpeg").convert_alpha()
 
-sprite_grigio = pygame.transform.scale(sprite_bruno, (50,50))
-sprite_bruno = pygame.transform.scale(sprite_grigio, (50,50))
+sprite_grigio = pygame.transform.scale(sprite_grigio, (50,50))
+sprite_bruno = pygame.transform.scale(sprite_bruno, (50,50))
 # TODO 1: Define cada cuántos milisegundos debe aparecer un meteorito nuevo.
 # Sugerencia: 800 (0.8 segundos)
 INTERVALO_APARICION = 800
@@ -110,7 +110,7 @@ while corriendo:
     pantalla.blit(sprite_bruno, (jugador_x, jugador_y))
 
     for meteorito in meteoritos:
-           pantalla.blit(sprite_grigio, (jugador_x, jugador_y))
+           pantalla.blit(sprite_grigio, (meteorito.x, meteorito.y))
     texto_puntuaje = fuente_small.render(f"Puntuaje: {puntuaje // 10}", True, "white")
     texto_nivel = fuente_small.render(f"nivel: {nivel}", True, "white")
     pantalla.blit(texto_nivel, (10,40))
